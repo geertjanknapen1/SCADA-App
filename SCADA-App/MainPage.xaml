@@ -9,6 +9,34 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <NavigationView x:Name="nvNavigation"
+                        IsSettingsVisible="False"
+                        IsBackButtonVisible="Collapsed"
+                        ItemInvoked="NvNavigation_ItemInvoked"
+                        PaneTitle="Menu"
+                        Header="SCADA Kassenbouw B.V."
+                        AlwaysShowHeader="True">
+            <NavigationView.MenuItems>
+                <NavigationViewItemHeader Content="Pagina's"/>
+                <NavigationViewItem>
+                    <NavigationViewItem.Icon>
+                        <BitmapIcon UriSource="/Assets/tint-drop.png"/>
+                    </NavigationViewItem.Icon>
+                    <TextBlock Text="Sproeiers" Tag="Nav_Sprinklers"/>
+                </NavigationViewItem>
+                <NavigationViewItem>
+                    <NavigationViewItem.Icon>
+                        <BitmapIcon UriSource="/Assets/light-bulb.png"/>
+                    </NavigationViewItem.Icon>
+                    <TextBlock Text="Assimilatielampen" Tag="Nav_Lamps"/>
+                </NavigationViewItem>
+            </NavigationView.MenuItems>
+            <ScrollViewer>
+                <ScrollViewer.Background>
+                    <SolidColorBrush Color="{ThemeResource SystemColorWindowColor}"/>
+                </ScrollViewer.Background>
+                <Frame x:Name="fRootFrame" Loaded="FRootFrame_Loaded"/>
+            </ScrollViewer>
+        </NavigationView>
     </Grid>
 </Page>

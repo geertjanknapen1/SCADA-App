@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SDKTemplate.Common;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -48,6 +49,9 @@ namespace SCADA_App
                 // Create a Frame to act as the navigation context and navigate to the first page
                 rootFrame = new Frame();
 
+                SuspensionManager.RegisterFrame(rootFrame, "AppFrame");
+                SuspensionManager.KnownTypes.Add(typeof(DateTimeOffset));
+
                 rootFrame.NavigationFailed += OnNavigationFailed;
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
@@ -90,9 +94,10 @@ namespace SCADA_App
         /// </summary>
         /// <param name="sender">The source of the suspend request.</param>
         /// <param name="e">Details about the suspend request.</param>
-        private void OnSuspending(object sender, SuspendingEventArgs e)
+        private async void OnSuspending(object sender, SuspendingEventArgs e)
         {
             var deferral = e.SuspendingOperation.GetDeferral();
+            await SuspensionManager.SaveAsync();
             //TODO: Save application state and stop any background activity
             deferral.Complete();
         }

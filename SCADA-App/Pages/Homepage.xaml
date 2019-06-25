@@ -1,0 +1,103 @@
+﻿<Page
+    x:Class="SCADA_App.Pages.Homepage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SCADA_App.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="350"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Image Source="/Assets/homeImg.jpeg" 
+               VerticalAlignment="Center" 
+               Stretch="UniformToFill" 
+               Margin="0,0,0,0" />
+            <TextBlock Text="SCADA" 
+                   FontSize="140" 
+                   FontFamily="Roboto" 
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Center"
+                   FontWeight="Bold" >
+                <TextBlock.Foreground>
+                    <SolidColorBrush Color="{ThemeResource SystemChromeAltMediumHighColor}"/>
+                </TextBlock.Foreground>
+            </TextBlock>
+        </Grid>
+        <ScrollViewer Grid.Row="1" ScrollViewer.VerticalScrollBarVisibility="Auto">
+            <StackPanel Orientation="Vertical" Padding="20">
+                <TextBlock Style="{StaticResource SubheaderTextBlockStyle}">
+                    Welkom op de SCADA-Applicatie
+                </TextBlock>
+                <RichTextBlock Style="{StaticResource BodyRichTextBlockStyle}">
+                    <Paragraph>
+                        Kassenbouw B.V. levert kassen voor de teelt van groente, fruit, bloemen en staat voor duurzaamheid, degelijkheid, kwaliteit, specialisme en een uitstekende service.
+                    </Paragraph>
+                    <Paragraph>
+                        Kassenbouw B.V. beschikt over een zeer moderne fabriek voor de staalproductie van tuinbouwkassen. De kassen worden geleverd met volautomatische klimaatregelsystemen en een SCADA-systeem om de systemen optimaal in te stellen.
+                    </Paragraph>
+                    <Paragraph>
+                        Praesent dignissim lobortis massa vitae luctus. Integer euismod mauris vel risus fermentum fermentum. Nullam 
+                    lobortis mattis risus nec commodo. Aliquam erat volutpat. Maecenas ullamcorper ultrices massa eu lacinia. 
+                    Quisque ac blandit velit. Sed porta est dolor, ut rutrum quam vestibulum vel. Phasellus mollis justo in 
+                    rhoncus  ultricies. Praesent imperdiet fermentum pulvinar. Donec cursus, arcu ut ullamcorper euismod, metus 
+                    metus vulputate nunc, in fermentum magna erat ut dui. Phasellus aliquam euismod accumsan. Maecenas at 
+                    ullamcorper massa, vitae  mollis metus. Fusce eleifend porta sem, id dignissim purus.
+                    </Paragraph>
+                    <Paragraph>
+                        Quisque nisl libero, accumsan non varius at, molestie non justo. Ut sodales lacinia quam nec ultricies. Duis 
+                    mattis sit amet dolor ac aliquet. Donec laoreet porttitor commodo. Nunc posuere lacus non eleifend commodo. 
+                    Praesent luctus elementum urna, scelerisque porttitor purus viverra eu. Vestibulum porttitor lorem fringilla, 
+                    pulvinar elit vitae, imperdiet eros. Sed sed laoreet justo. Donec imperdiet turpis id est dignissim luctus. 
+                    Aenean nec iaculis eros.
+                    </Paragraph>
+                    <Paragraph>
+                        Duis vitae auctor diam, quis pretium quam. Pellentesque mattis lacinia condimentum. Aliquam leo urna, 
+                    elementum eu enim eu, auctor ultrices metus. Praesent et iaculis felis. Etiam consectetur eu purus vitae 
+                    hendrerit. Curabitur finibus bibendum mollis. Donec id nisl sapien. Donec ac vulputate leo, et ultricies mi.
+                    </Paragraph>
+                    <Paragraph>
+                        Praesent dignissim lobortis massa vitae luctus. Integer euismod mauris vel risus fermentum fermentum. Nullam 
+                    lobortis mattis risus nec commodo. Aliquam erat volutpat. Maecenas ullamcorper ultrices massa eu lacinia. 
+                    Quisque ac blandit velit. Sed porta est dolor, ut rutrum quam vestibulum vel. Phasellus mollis justo in 
+                    rhoncus  ultricies. Praesent imperdiet fermentum pulvinar. Donec cursus, arcu ut ullamcorper euismod, metus 
+                    metus vulputate nunc, in fermentum magna erat ut dui. Phasellus aliquam euismod accumsan. Maecenas at 
+                    ullamcorper massa, vitae  mollis metus. Fusce eleifend porta sem, id dignissim purus.
+                    </Paragraph>
+                    <Paragraph>
+                        Quisque nisl libero, accumsan non varius at, molestie non justo. Ut sodales lacinia quam nec ultricies. Duis 
+                    mattis sit amet dolor ac aliquet. Donec laoreet porttitor commodo. Nunc posuere lacus non eleifend commodo. 
+                    Praesent luctus elementum urna, scelerisque porttitor purus viverra eu. Vestibulum porttitor lorem fringilla, 
+                    pulvinar elit vitae, imperdiet eros. Sed sed laoreet justo. Donec imperdiet turpis id est dignissim luctus. 
+                    Aenean nec iaculis eros.
+                    </Paragraph>
+                    <Paragraph>
+                        Duis vitae auctor diam, quis pretium quam. Pellentesque mattis lacinia condimentum. Aliquam leo urna, 
+                    elementum eu enim eu, auctor ultrices metus. Praesent et iaculis felis. Etiam consectetur eu purus vitae 
+                    hendrerit. Curabitur finibus bibendum mollis. Donec id nisl sapien. Donec ac vulputate leo, et ultricies mi.
+                    </Paragraph>
+                    <Paragraph>
+                        Praesent dignissim lobortis massa vitae luctus. Integer euismod mauris vel risus fermentum fermentum. Nullam 
+                    lobortis mattis risus nec commodo. Aliquam erat volutpat. Maecenas ullamcorper ultrices massa eu lacinia. 
+                    Quisque ac blandit velit. Sed porta est dolor, ut rutrum quam vestibulum vel. Phasellus mollis justo in 
+                    rhoncus  ultricies. Praesent imperdiet fermentum pulvinar. Donec cursus, arcu ut ullamcorper euismod, metus 
+                    metus vulputate nunc, in fermentum magna erat ut dui. Phasellus aliquam euismod accumsan. Maecenas at 
+                    ullamcorper massa, vitae  mollis metus. Fusce eleifend porta sem, id dignissim purus.
+                    </Paragraph>
+                    <Paragraph>
+                        Quisque nisl libero, accumsan non varius at, molestie non justo. Ut sodales lacinia quam nec ultricies. Duis 
+                    mattis sit amet dolor ac aliquet. Donec laoreet porttitor commodo. Nunc posuere lacus non eleifend commodo. 
+                    Praesent luctus elementum urna, scelerisque porttitor purus viverra eu. Vestibulum porttitor lorem fringilla, 
+                    pulvinar elit vitae, imperdiet eros. Sed sed laoreet justo. Donec imperdiet turpis id est dignissim luctus. 
+                    Aenean nec iaculis eros.
+                    </Paragraph>
+                </RichTextBlock>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
